@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #1a1a1a, #000000);
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+}
+
+.content.visible {
+    opacity: 1;
+}
+
+.logo {
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #f8d000, #d4b000);
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+}
+
+button.active {
+    pointer-events: auto;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to bottom, #ffd800, #e4c000);
+}
+
+/* Background Selection Styles */
+.background-selection {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.background-selection.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.background-option {
+    width: 300px;
+    height: 200px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.background-option:hover {
+    transform: scale(1.05);
+    border-color: #f8d000;
+}
+
+.background-option.selected {
+    border-color: #f8d000;
+    box-shadow: 0 0 20px rgba(248, 208, 0, 0.5);
+}
+
+.background-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.selection-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f8d000;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(248, 208, 0, 0.5);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUT-Draft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <video id="video-background" autoplay muted>
+        <source src="vid/campnou.mp4" type="video/mp4">
+    </video>
+    
+    <div class="content" id="main-content">
+        <img src="img/fut-draft.jpg" alt="FUT Logo" class="logo">
+        <div class="button-container">
+            <button id="start-draft">Start Draft</button>
+            <button id="rules">Rules</button>
+        </div>
+    </div>
+
+    <!-- Background Selection Screen -->
+    <div class="background-selection" id="background-selection">
+        <h2 class="selection-title">Choose Your Formation</h2>
+        <div class="background-options">
+            <div class="background-option" data-background="img/stadium1.jpg">
+                <img src="img/4-3-1-2.png" alt="4-3-1-2">
+                <p>4-3-1-2</p>
+            </div>
+            <div class="background-option" data-background="img/stadium2.jpg">
+                <img src="img/4-3-3.png" alt="4-3-3">
+                <p>4-3-3</p>
+            </div>
+            <div class="background-option" data-background="img/stadium3.jpg">
+                <img src="img/4-4-2.png" alt="4-4-2">
+                <p>4-4-2</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/players.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
